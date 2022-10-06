@@ -1,11 +1,9 @@
-// BST implementation
-
 class BST {
   constructor() {
     this.root = null;
   };
 
-  create(val) {
+  insert(val) {
     const newNode = new Node(val);
 
     if (!this.root) {
@@ -88,16 +86,17 @@ class Node {
 
 const tree = new BST();
 
-tree.create(20);
-tree.create(14);
-tree.create(57);
-tree.create(9);
-tree.create(19);
-tree.create(31);
-tree.create(62);
-tree.create(3);
-tree.create(11);
-tree.create(72);
+// populating tree with some nodes
+tree.insert(20);
+tree.insert(14);
+tree.insert(57);
+tree.insert(9);
+tree.insert(19);
+tree.insert(31);
+tree.insert(62);
+tree.insert(3);
+tree.insert(11);
+tree.insert(72);
 
 const usingInOrder = tree.inOrder();
 console.log(usingInOrder) // > [ 3, 9, 11, 14, 19, 20, 31, 57, 62, 72 ]
